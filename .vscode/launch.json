@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SortApp",
+            "request": "launch",
+            "mainClass": "SortApp",
+            "projectName": "homeworks_528e6f8d"
+        },
+        {
+            "type": "java",
+            "name": "ArraySort",
+            "request": "launch",
+            "mainClass": "ArraySort",
+            "projectName": "homeworks_528e6f8d"
+        },
+        {
+            "type": "java",
+            "name": "NToplamApp",
+            "request": "launch",
+            "mainClass": "NToplamApp",
+            "projectName": "homeworks_528e6f8d"
+        },
+        {
+            "type": "java",
+            "name": "ReverseTextApp",
+            "request": "launch",
+            "mainClass": "ReverseTextApp",
+            "projectName": "homeworks_528e6f8d"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
