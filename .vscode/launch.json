@@ -2,6 +2,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "LinkQueueApp",
             "request": "launch",
             "mainClass": "LinkQueueApp",
@@ -23,6 +24,8 @@
         },
         {
             "type": "java",
+=======
+>>>>>>> c0f4b57e1de2782b9a798b0e4a990c33add24422
             "name": "SortApp",
             "request": "launch",
             "mainClass": "SortApp",
