@@ -27,37 +27,51 @@ public class ArraySort {
         recQuickSort(0, elemanSayisi-1);
     }
 
+     // Quick Sort algoritmasini recursive gerceklestiren metot
     private void recQuickSort(int left, int right) {
+        // Eger alt dizi sadece bir elemansa sıralamaya gerek yoktur
         if (right - left <= 0) {
-            return;
+            return; // Geri dön
         } else {
+            // Sağdaki eleman pivot olarak seçiliyor
             long pivot = dizi[right];
-            int partition = patitionIt(left, right, pivot);
+            
+            // Alt diziyi pivot etrafında iki gruba ayırıyoruz
+            int partition = partitionIt(left, right, pivot);
+            
+            // Sol alt diziyi sıralamak için metodu yeniden çağırıyoruz
             recQuickSort(left, partition - 1);
+            
+            // Sağ alt diziyi sıralamak için metodu yeniden çağırıyoruz
             recQuickSort(partition + 1, right);
         }
-
     }
 
-    // diziyi pivot etrafında ikiye ayirir pivotun dogru konumunu belirler
-    private int patitionIt(int left, int right, long pivot) {
-        int leftPtr = left - 1;
-        int rightPtr = right;
+    // Diziyi pivot etrafında iki alt gruba boler ve pivotun dogru konumunu belirler
+    private int partitionIt(int left, int right, long pivot) {
+        int leftPtr = left - 1; // Sol tarafı işaret eden pointer başlangıçta sol sınırın bir adım gerisinde
+        int rightPtr = right;  // Sağ tarafı işaret eden pointer başlangıçta sağ sınırda
 
-        while(true){
+        while (true) {
+            // Pivot degerinden kucuk olan elemanlari bulmak icin soldan sağa dogru ilerler
             while (dizi[++leftPtr] < pivot);
 
-            while(rightPtr >0 && dizi[--rightPtr] > pivot);
+            // Pivot degerinden buyuk olan elemanlari bulmak icin sagdan sola dogru ilerler
+            while (rightPtr > 0 && dizi[--rightPtr] > pivot);
 
-            if(leftPtr >= rightPtr){
+            // Eğer iki pointer karsilasirsa donguyu kırar
+            if (leftPtr >= rightPtr) {
                 break;
-            }
-            else{
+            } else {
+                // Sol ve sagdaki elemanlar sıralanmis olmak icin yer degistirir
                 swap(leftPtr, rightPtr);
             }
         }
+
+        // Pivotun dogru konumunu dondurur
         return leftPtr;
     }
+
 
     //dizinin iki elemanini yer degistirmeye yarar
     private void swap(int index1, int index2) {
