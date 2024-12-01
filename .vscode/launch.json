@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LinkQueueApp",
+            "request": "launch",
+            "mainClass": "LinkQueueApp",
+            "projectName": "homeworks_528e6f8d"
+        },
+        {
+            "type": "java",
+            "name": "QueueApp",
+            "request": "launch",
+            "mainClass": "QueueApp",
+            "projectName": "homeworks_528e6f8d"
+        },
+        {
+            "type": "java",
+            "name": "Queue",
+            "request": "launch",
+            "mainClass": "Queue",
+            "projectName": "homeworks_528e6f8d"
+        },
+        {
+            "type": "java",
             "name": "SortApp",
             "request": "launch",
             "mainClass": "SortApp",
